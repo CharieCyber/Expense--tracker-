@@ -53,9 +53,9 @@ def add_expense(expenses):
 def view_expenses(expenses):
     print("\nExpenses:")
     i = 1
-    for e in expenses:
-        print(f"{i}. Category: {e['category']}, Amount: {e['amount']}")
-    i += 1
+    for e in enumerate(expenses, start=1):
+        print(f"{i}. Category: {e[1]['category']}, Amount: {e[1]['amount']}")
+        i += 1
     print()
 
 
